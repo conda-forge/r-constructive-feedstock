@@ -1,6 +1,5 @@
 {% set version = '1.0.1' %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-constructive
@@ -13,8 +12,7 @@ source:
   sha256: 307a540d91ec486c08f1e1dc82a228c54a6350d07ea635f3252a917a61f3e5f0
 
 build:
-  merge_build_host: True  # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -43,7 +41,6 @@ requirements:
     - r-waldo
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     - r-cli
     - r-diffobj
     - r-rlang >=1.0.0
