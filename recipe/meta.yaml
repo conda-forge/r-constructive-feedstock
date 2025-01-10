@@ -1,4 +1,4 @@
-{% set version = '1.0.1' %}
+{% set version = "1.1.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/constructive_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/constructive/constructive_{{ version }}.tar.gz
-  sha256: 307a540d91ec486c08f1e1dc82a228c54a6350d07ea635f3252a917a61f3e5f0
+  sha256: 02ff01676feea14fef56db56a4c6a02e6b301ae2285ab91b1f16ebca6e23d388
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -55,8 +55,7 @@ about:
   home: https://cynkra.github.io/constructive/
   dev_url: https://github.com/cynkra/constructive
   license: MIT
-  summary: Prints code that can be used to recreate R objects. In a sense it is similar to 'base::dput()'
-    or 'base::deparse()' but 'constructive' strives to use idiomatic constructors.
+  summary: Prints code that can be used to recreate R objects. In a sense it is similar to 'base::dput()' or 'base::deparse()' but 'constructive' strives to use idiomatic constructors.
   license_family: MIT
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
