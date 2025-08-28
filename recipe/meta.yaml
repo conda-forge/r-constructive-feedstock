@@ -1,4 +1,4 @@
-{% set version = "1.1.0" %}
+{% set version = "1.2.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/constructive_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/constructive/constructive_{{ version }}.tar.gz
-  sha256: 02ff01676feea14fef56db56a4c6a02e6b301ae2285ab91b1f16ebca6e23d388
+  sha256: aa9d2f4e210e08aca4d5b320fb8e4ac568f5cc548d6c3981b3254fad60c35b70
 
 build:
   number: 0
